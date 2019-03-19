@@ -1,0 +1,8 @@
+{
+  "name": "Sykeben's Test Bed",
+  "description": "Test bed.",
+  "repository": "https://github.com/sykeben/sykeben-test-bed",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "test"],
+  "image": "heroku/nodejs"
+}

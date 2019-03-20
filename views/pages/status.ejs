@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <!-- Bootstrap CSS -->
+        <% include ../partials/bootstrap.css.ejs %>
+
+        <!-- Other Meta -->
+        <title>Sykeben Test Bed &rarr; Status</title>
+
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <% include ../partials/navbar.ejs %>
+
+        <!-- Main Content -->
+        <div class="container-fluid p-5">
+
+            <!-- Title -->
+            <h1 class="mb-1">Status Page</h1>
+            <p class="lead">Is it working?</p>
+
+            <!-- Status Values -->
+            <table class="table table-responsive table-borderless table-sm">
+                
+                <!-- Header -->
+                <thead>
+                    <th scope="col" class="pr-5">Name</th>
+                    <th scope="col">Value</th>
+                </thead>
+
+                <!-- Body -->
+                <tbody>
+                    <tr>
+                        <!-- Server Port -->
+                        <td>Port</td>
+                        <td><%= (process.env.PORT || 5000).toString() %></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- Bootstrap JS -->
+        <% include ../partials/bootstrap.js.ejs %>
+        
+    </body>
+
+</html>

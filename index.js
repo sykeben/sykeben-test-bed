@@ -1,10 +1,10 @@
 // Requires:
-const logmaster = require('./modules/logmaster')
+const logger = require('heroku-logger')
 const express = require('express')
 const path = require('path')
 
 // Define and start the server.
-logmaster.message('Starting server...')
+logger.info('Starting server...')
 const PORT = process.env.PORT || 5000
 const app = express()
 
@@ -15,12 +15,6 @@ const app = express()
 
   .get('/', (req, res) => res.render('pages/index'))
   .get('/links', (req, res) => res.render('pages/links'))
+  .get('/status', (req, res) => res.render('pages/status'))
 
-  .listen(PORT, () => logmaster.status(`Server listening on port ${ PORT }.`))
-
-// Function to stop the server.
-function stopAll() {
-  logmaster.message('Stopping the server...')
-  app.close()
-  logmaster.status('Server stopped.')
-}
+  .listen(PORT, () => logger.info(`Server listening on port ${ PORT }.`))

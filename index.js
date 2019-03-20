@@ -17,4 +17,4 @@ const app = express()
   .get('/links', (req, res) => res.render('pages/links'))
   .get('/status', (req, res) => res.render('pages/status'))
 
-  .listen(PORT, () => logger.info(`Server listening on port ${ PORT }.`))
+  .listen(PORT, () => logger.info(`Server listening on port ${ PORT }.`, { port: PORT }))

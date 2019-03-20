@@ -40,6 +40,10 @@
                         <td>Port</td>
                         <td><%= (process.env.PORT || 5000).toString() %></td>
                     </tr>
+                    <tr>
+                        <td>Uptime</td>
+                        <td><%= (process.uptime() + "").toHHMMSS() %></td>
+                    </tr>
                 </tbody>
             </table>
 
